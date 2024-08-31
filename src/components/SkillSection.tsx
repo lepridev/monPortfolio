@@ -31,7 +31,7 @@ const SkillSection = (props: Props) => {
     },
   ];
   return (
-    <div className="md:grid md:grid-cols-2 space-y-4 md:max-w-5xl mx-auto gap-5">
+    <div className="md:grid md:grid-cols-2 space-y-4 md:max-w-5xl py-5 mx-auto gap-5">
       {skills.map((skill, index) => (
         <SkillBox
           key={index}
