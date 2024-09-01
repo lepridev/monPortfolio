@@ -13,6 +13,7 @@ import { SiMongodb } from "react-icons/si";
 import { RiFirebaseFill, RiNextjsFill } from "react-icons/ri";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiXcode } from "react-icons/si";
+import Image from "next/image";
 
 type Props = {};
 
@@ -27,6 +28,14 @@ const Footer = (props: Props) => {
             <FaLinkedin size={30} color="white" />
             <FaWhatsapp size={30} color="white" />
             <FaFacebook size={30} color="white" />
+          </div>
+          <div className="relative  w-full h-5">
+            <Image
+              src={"/logojust.png"}
+              alt="Armand Lepri portfolio"
+              fill
+              className="object-contain"
+            />
           </div>
         </div>
       </div>

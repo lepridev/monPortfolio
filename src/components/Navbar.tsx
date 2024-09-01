@@ -7,14 +7,22 @@ import { AiOutlineClose } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
   const [isMobile, setIsMobile] = useState(false);
 
+  const pathname = usePathname();
+  const router = useRouter();
+
   const handleOpen = () => {
     setIsMobile(!isMobile);
+  };
+
+  const handleClose = () => {
+    setIsMobile(false);
   };
 
   const menus = [
@@ -30,24 +38,28 @@ const Navbar = (props: Props) => {
       title: "Projets",
       link: "/projets",
     },
-    {
-      title: "Services",
-      link: "/services",
-    },
-    {
-      title: "CV",
-      link: "/moncv",
-    },
+    // {
+    //   title: "Services",
+    //   link: "/services",
+    // },
+    // {
+    //   title: "CV",
+    //   link: "/moncv",
+    // },
   ];
 
   return (
     <div className="h-24 px-5 md:px-10 bg-black flex items-center justify-between relative">
-      <div className="relative h-full w-1/5 flex items-center justify-start">
+      <div
+        className="relative h-full w-1/5 flex items-center justify-start"
+        onClick={() => router.push("/")}
+      >
         <Image
           src={"/logojust.png"}
           alt="Logo Armand Lepri portfolio d'armand lepri"
           className="object-contain"
           fill
+          onClick={handleClose}
         />
         {/* <span className="md:text-xl text-[12px] ml-2">
           Armand <br /> Lepri
@@ -75,7 +87,13 @@ const Navbar = (props: Props) => {
         {menus.map((menu) => (
           <ul key={menu.title}>
             <Link href={menu.link}>
-              <li className="text-slate-100 text-sm ">{menu.title} </li>
+              <li
+                className={`text-slate-100 text-sm ${
+                  pathname === menu.link && " border-b-2 border-red-400 p-1 "
+                }`}
+              >
+                {menu.title}
+              </li>
             </Link>
           </ul>
         ))}
@@ -89,7 +107,12 @@ const Navbar = (props: Props) => {
           {menus.map((menu) => (
             <ul key={menu.title}>
               <Link href={menu.link}>
-                <li className="text-white font-bold text-base ">
+                <li
+                  className={`text-black text-lg font-bold ${
+                    pathname === menu.link && " border-b-2 border-red-400 p-1 "
+                  }`}
+                  onClick={handleOpen}
+                >
                   {menu.title}{" "}
                 </li>
               </Link>
