@@ -1,9 +1,28 @@
 import Image from "next/image";
 import React from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 type Props = {};
 
 const AproposPage = (props: Props) => {
+  const WhatsAppLink = () => {
+    // Numéro WhatsApp Business et message par défaut
+    const phoneNumber = "2250799520702"; // Remplacez par votre numéro
+    const message = "Bonjour, je suis intéressé par vos services."; // Message prédéfini (facultatif)
+
+    // URL pour WhatsApp
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    return (
+      <a href={whatsappURL} target="_blank" rel="noopener noreferrer">
+        <button className=" text-sm bg-[#7e22ce] text-[#ffffff] font-bold p-3 rounded-lg hover:bg-purple-800 active:scale-95 transition-transform transform">
+          Me Contacter
+        </button>
+      </a>
+    );
+  };
   return (
     <div>
       <div className="flex mx-auto justify-center items-center bg-black md:p-10 p-5">
@@ -100,9 +119,7 @@ const AproposPage = (props: Props) => {
               </div>
               <div className="flex flex-grow"></div>
               <div className="flex pt-10">
-                <button className=" text-sm bg-[#7e22ce] text-[#ffffff] font-bold p-3 rounded-lg hover:bg-purple-800 active:scale-95 transition-transform transform">
-                  Me Contacter
-                </button>
+                <WhatsAppLink />
               </div>
             </div>
           </div>

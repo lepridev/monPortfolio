@@ -4,6 +4,24 @@ import React from "react";
 type Props = {};
 
 const Header = (props: Props) => {
+  const WhatsAppLink = () => {
+    // Numéro WhatsApp Business et message par défaut
+    const phoneNumber = "2250799520702"; // Remplacez par votre numéro
+    const message = "Bonjour, je suis intéressé par vos services."; // Message prédéfini (facultatif)
+
+    // URL pour WhatsApp
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    return (
+      <a href={whatsappURL} target="_blank" rel="noopener noreferrer">
+        <button className="px-5 py-3 text-white font-bold bg-green-400 rounded-md text-sm">
+          prendre un CALL
+        </button>
+      </a>
+    );
+  };
   return (
     <div className="flex flex-col md:flex-row items-center justify-center md:justify-between min-h-screen w-full gap-3 px-3 pb-7 bg-black text-white">
       <div className="w-full h-1/2 md:w-1/2 order-2 md:order-1  md:min-h-[500px] md:flex md:flex-col md:items-start space-y-6 md:justify-center  p-3">
@@ -20,9 +38,7 @@ const Header = (props: Props) => {
           </h2>
         </div>
         <div>
-          <button className="px-5 py-3 text-white font-bold bg-green-400 rounded-md text-sm">
-            prendre un CALL
-          </button>
+          <WhatsAppLink />
         </div>
       </div>
       <div className="relative h-1/2 w-full order-1 md:order-2 flex-1 md:w-1/2 md:min-h-[500px] md:rounded-lg rounded-md">

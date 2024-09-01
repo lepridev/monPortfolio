@@ -1,9 +1,15 @@
 import Image from "next/image";
 import React from "react";
 
-type Props = { image: string; title: string; desc: string; btn: string };
+type Props = {
+  image: string;
+  title: string;
+  desc: string;
+  btn: string;
+  link: string;
+};
 
-const SkillBox = ({ image, title, desc, btn }: Props) => {
+const SkillBox = ({ image, title, desc, btn, link }: Props) => {
   return (
     <div className="px-3 md:py-6 ">
       <div className="flex flex-col h-[600px] rounded-2xl md:w-[450px] w-full bg-[#ffffff] shadow-xl">
@@ -19,9 +25,11 @@ const SkillBox = ({ image, title, desc, btn }: Props) => {
           <div className="text-xl font-bold   text-[#374151] pb-3">{title}</div>
           <div className=" text-sm   text-[#374151]">{desc}</div>
           <div className="flex justify-end items-center ">
-            <button className="bg-[#7e22ce] text-[#ffffff]  font-bold text-base  p-3 rounded-lg hover:bg-purple-800 active:scale-95 transition-transform transform">
-              {btn}
-            </button>
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              <button className="bg-[#7e22ce] text-[#ffffff]  font-bold text-base  p-3 rounded-lg hover:bg-purple-800 active:scale-95 transition-transform transform">
+                {btn}
+              </button>
+            </a>
           </div>
         </div>
       </div>

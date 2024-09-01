@@ -10,24 +10,28 @@ const SkillSection = (props: Props) => {
       title: "Application web",
       desc: "Une application web pour Cambridge International School Ekressin Grand-Bassam",
       btn: "Voir",
+      link: "http://cise.edu.ci",
     },
     {
       image: "kayPrestige.png",
       title: "Site Vitrine",
       desc: "Un site vitrine pour l'entreprise KayPrestige Spécialisée dans la confection de macaron thermo-collant, de maillots de sport, de polo.",
       btn: "Voir",
+      link: "http://kayprestige.ci",
     },
     {
       image: "guideLotissement.png",
       title: "Application web Guide Villageois ",
       desc: "Application web pour la chefferie de Gbougbo Dabou pour l'enregistrement des lots dans le guide villageois",
       btn: "Voir",
+      link: "",
     },
     {
       image: "ecommerceMobile.png",
       title: "Application mobile Ios/Andoid",
       desc: "Application d'e-commerce pour une entreprise de commerce en ligne",
       btn: "Voir",
+      link: "",
     },
   ];
   return (
@@ -39,6 +43,7 @@ const SkillSection = (props: Props) => {
           title={skill.title}
           desc={skill.desc}
           btn={skill.btn}
+          link={skill.link}
         />
       ))}
     </div>
