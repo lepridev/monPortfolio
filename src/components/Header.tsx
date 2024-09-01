@@ -33,8 +33,8 @@ const Header = (props: Props) => {
         </div>
         <div>
           <h2>
-            Je suis disposé a vous accordé un call ou un meeting pour definir
-            les contours de ce projet que vous portez
+            Je suis disposé à vous accorder un call ou un meeting pour definir
+            les contours de votre projet.
           </h2>
         </div>
         <div>

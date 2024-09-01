@@ -18,7 +18,7 @@ const AproposPage = (props: Props) => {
     return (
       <a href={whatsappURL} target="_blank" rel="noopener noreferrer">
         <button className=" text-sm bg-[#7e22ce] text-[#ffffff] font-bold p-3 rounded-lg hover:bg-purple-800 active:scale-95 transition-transform transform">
-          Me Contacter
+          Pour me contacter
         </button>
       </a>
     );
@@ -44,16 +44,15 @@ const AproposPage = (props: Props) => {
                   les technologies de l&apos;information et autodidacte.
                 </p>
                 <p className="text-center text-sm font-normal">
-                  J&apos;ai commencé ma formation en informatique industrielle
-                  et maintenance (2IM) à l&apos;école EUROF-Zone4C en première
-                  année. Au fil du temps, j&apos;ai découvert le métier de
-                  développeur web, un domaine qui a rapidement capté mon
-                  intérêt. Grâce aux bases acquises lors de ma formation en 2IM,
-                  je me suis plongé dans l&apos;apprentissage et le
-                  perfectionnement de la programmation. Aujourd&apos;hui, je
-                  suis capable de réaliser un projet full-stack de manière
-                  autonome ou en équipe, jusqu&apos;au déploiement de
-                  l&apos;application.
+                  J&apos;ai débuté ma formation en informatique industrielle et
+                  maintenance (2IM) à l&apos;école EUROF-Zone4C en première
+                  année. Au fur et à mesure, j&apos;ai découvert le métier de
+                  développeur web, qui a rapidement éveillé mon intérêt. Avec
+                  les bases acquises lors de ma formation en 2IM, je me suis
+                  immergé dans l&apos;apprentissage et le perfectionnement de la
+                  programmation. Aujourd&apos;hui, je suis en mesure de réaliser
+                  un projet full-stack de manière autonome ou en équipe,
+                  jusqu&apos;au déploiement de l&apos;application.
                 </p>
               </div>
               <div className="flex flex-col gap-2  text-base">
@@ -114,7 +113,9 @@ const AproposPage = (props: Props) => {
                       <path d="M20 6 9 17l-5-5"></path>
                     </svg>
                   </div>
-                  <div className="text-sm">Gérer la maintenance</div>
+                  <div className="text-sm">
+                    Compétent pour assurer la maintenance.
+                  </div>
                 </div>
               </div>
               <div className="flex flex-grow"></div>
